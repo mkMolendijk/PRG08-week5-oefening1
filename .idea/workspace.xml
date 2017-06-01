@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98fa061d-8a8a-45b3-8354-45481a0a4640" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/typescript-compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev/observable.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dev/observer.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/chicken.ts" afterPath="$PROJECT_DIR$/dev/chicken.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/observable.ts" afterPath="$PROJECT_DIR$/dev/observable.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/observer.ts" afterPath="$PROJECT_DIR$/dev/observer.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/zombie.ts" afterPath="$PROJECT_DIR$/dev/zombie.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/js/main.js" afterPath="$PROJECT_DIR$/docs/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/js/main.js.map" afterPath="$PROJECT_DIR$/docs/js/main.js.map" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,11 +23,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="observer.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="observer.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dev/observer.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+              <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -34,7 +37,27 @@
         <entry file="file://$PROJECT_DIR$/dev/observable.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="1" />
+              <caret line="1" column="31" lean-forward="false" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chicken.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dev/chicken.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="zombie.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dev/zombie.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -48,8 +71,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/dev/observable.ts" />
         <option value="$PROJECT_DIR$/dev/observer.ts" />
+        <option value="$PROJECT_DIR$/dev/observable.ts" />
+        <option value="$PROJECT_DIR$/dev/zombie.ts" />
+        <option value="$PROJECT_DIR$/dev/chicken.ts" />
       </list>
     </option>
   </component>
@@ -202,12 +227,12 @@
       <option name="presentableId" value="Default" />
       <updated>1496143398065</updated>
       <workItem from="1496143399272" duration="659000" />
-      <workItem from="1496310550192" duration="1167000" />
+      <workItem from="1496310550192" duration="2639000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1826000" />
+    <option name="totallyTimeSpent" value="3298000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -243,10 +268,18 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/dev/zombie.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dev/observable.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="1" />
+          <caret line="1" column="31" lean-forward="false" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -254,7 +287,15 @@
     <entry file="file://$PROJECT_DIR$/dev/observer.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/chicken.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
           <folding />
         </state>
       </provider>

@@ -39,6 +39,10 @@ var Chicken = (function (_super) {
         _this.div.addEventListener("click", function (e) { return _this.onClick(e); });
         return _this;
     }
+    Chicken.prototype.subscribe = function () {
+    };
+    Chicken.prototype.unsubscribe = function () {
+    };
     Chicken.prototype.update = function () {
         this.x += this.xspeed;
         this.y += this.yspeed;
@@ -148,6 +152,8 @@ var Zombie = (function (_super) {
         _this.chicken = c;
         return _this;
     }
+    Zombie.prototype.notify = function () {
+    };
     Zombie.prototype.update = function () {
         Util.setSpeed(this, this.chicken.x - this.x, this.chicken.y - this.y);
         this.x += this.xspeed;
