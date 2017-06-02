@@ -31,6 +31,7 @@ var Chicken = (function (_super) {
     function Chicken() {
         var _this = _super.call(this, "bird", document.body) || this;
         _this.score = 0;
+        _this.observers = new Array();
         _this.width = 67;
         _this.height = 110;
         _this.speedmultiplier = 2;
@@ -39,9 +40,16 @@ var Chicken = (function (_super) {
         _this.div.addEventListener("click", function (e) { return _this.onClick(e); });
         return _this;
     }
-    Chicken.prototype.subscribe = function () {
+    Chicken.prototype.subscribe = function (o) {
+        this.observers.push(o);
     };
     Chicken.prototype.unsubscribe = function () {
+    };
+    Chicken.prototype.action = function () {
+        for (var _i = 0, _a = this.observers; _i < _a.length; _i++) {
+            var o = _a[_i];
+            o.notify();
+        }
     };
     Chicken.prototype.update = function () {
         this.x += this.xspeed;
@@ -56,6 +64,7 @@ var Chicken = (function (_super) {
         this.div.style.backgroundImage = "url('images/chickencalling.png')";
         this.xspeed = 0;
         this.yspeed = 0;
+        this.action();
         e.stopPropagation();
     };
     return Chicken;
@@ -144,22 +153,26 @@ var Zombie = (function (_super) {
     __extends(Zombie, _super);
     function Zombie(c) {
         var _this = _super.call(this, "zombie", document.body) || this;
+        _this[3] = notify();
         _this.width = 67;
         _this.height = 119;
         _this.x = Math.random() * (window.innerWidth - 67);
         _this.y = Math.random() * (window.innerHeight / 2) + (window.innerHeight / 2 - 67);
         _this.speedmultiplier = Math.random() * 2;
         _this.chicken = c;
+        c.subscribe(_this);
         return _this;
     }
-    Zombie.prototype.notify = function () {
-    };
-    Zombie.prototype.update = function () {
-        Util.setSpeed(this, this.chicken.x - this.x, this.chicken.y - this.y);
-        this.x += this.xspeed;
-        this.y += this.yspeed;
-        _super.prototype.update.call(this);
-    };
     return Zombie;
 }(GameObject));
+{
+    this.div.style.backgroundImage = "url('images/calling.png')";
+}
+update();
+{
+    Util.setSpeed(this, this.chicken.x - this.x, this.chicken.y - this.y);
+    this.x += this.xspeed;
+    this.y += this.yspeed;
+    _super.update.call(this);
+}
 //# sourceMappingURL=main.js.map

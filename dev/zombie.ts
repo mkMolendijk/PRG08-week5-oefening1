@@ -14,10 +14,11 @@ class Zombie extends GameObject implements Observer {
         this.speedmultiplier = Math.random() * 2;
         this.chicken = c;
 
+        c.subscribe(this);
     }
 
-    public notify() {
-
+    public 3notify(){
+        this.div.style.backgroundImage = "url('images/calling.png')";
     }
 
     public update() {

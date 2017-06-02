@@ -3,6 +3,7 @@
 class Chicken extends GameObject implements Observable {
 
     private score: number = 0;
+    public observers: Array<Observer> = new Array();
 
     constructor() {
         super("bird", document.body);
@@ -10,19 +11,24 @@ class Chicken extends GameObject implements Observable {
         this.width = 67;
         this.height = 110;
         this.speedmultiplier = 2;
-
         document.getElementsByTagName("ui")[0].innerHTML = "Score: " + this.score;
 
         window.addEventListener("click", (e: MouseEvent) => this.onWindowClick(e));
         this.div.addEventListener("click", (e: MouseEvent) => this.onClick(e));
     }
 
-    public subscribe() {
-
+    public subscribe(o: Observer): void {
+        this.observers.push(o);
     }
 
     public unsubscribe() {
-        
+
+    }
+
+    public action() {
+        for (let o of this.observers) {
+            o.notify();
+        }
     }
 
     public update() {
@@ -43,6 +49,7 @@ class Chicken extends GameObject implements Observable {
         this.xspeed = 0;
         this.yspeed = 0;
 
+        this.action();
         // hiermee voorkomen we dat window.click ook uitgevoerd wordt
         e.stopPropagation();
     }
