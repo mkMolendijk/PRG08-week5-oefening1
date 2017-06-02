@@ -17,7 +17,7 @@ class Zombie extends GameObject implements Observer {
         c.subscribe(this);
     }
 
-    public 3notify(){
+    public notify(){
         this.div.style.backgroundImage = "url('images/calling.png')";
     }
 

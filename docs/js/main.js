@@ -153,7 +153,6 @@ var Zombie = (function (_super) {
     __extends(Zombie, _super);
     function Zombie(c) {
         var _this = _super.call(this, "zombie", document.body) || this;
-        _this[3] = notify();
         _this.width = 67;
         _this.height = 119;
         _this.x = Math.random() * (window.innerWidth - 67);
@@ -163,16 +162,15 @@ var Zombie = (function (_super) {
         c.subscribe(_this);
         return _this;
     }
+    Zombie.prototype.notify = function () {
+        this.div.style.backgroundImage = "url('images/calling.png')";
+    };
+    Zombie.prototype.update = function () {
+        Util.setSpeed(this, this.chicken.x - this.x, this.chicken.y - this.y);
+        this.x += this.xspeed;
+        this.y += this.yspeed;
+        _super.prototype.update.call(this);
+    };
     return Zombie;
 }(GameObject));
-{
-    this.div.style.backgroundImage = "url('images/calling.png')";
-}
-update();
-{
-    Util.setSpeed(this, this.chicken.x - this.x, this.chicken.y - this.y);
-    this.x += this.xspeed;
-    this.y += this.yspeed;
-    _super.update.call(this);
-}
 //# sourceMappingURL=main.js.map
